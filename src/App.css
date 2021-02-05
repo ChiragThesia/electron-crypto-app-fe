@@ -1,6 +1,32 @@
 
 .App {
   text-align: center;
+  padding: 20px
+}
+
+.RSS-Feed {
+  margin: 0 auto;
+}
+
+button{
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #4eb5f1;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.4s ease 0;
+  font-size: 15px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #222222;
+
+}
+
+button:hover{
+  background-color: #434343;
+  color: #ffffff !important;
+  letter-spacing: 1px;
+  transform: all 0.4s ease 0;
 }
 
 

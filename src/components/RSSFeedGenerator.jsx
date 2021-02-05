@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './RSSFeed.css';
 
-function RSSFeed({ accountName }) {
+function RSSFeed() {
 	const [ tweetData, setTweetData ] = useState([
 		{
 			name: 'Chirag',
 			content: 'BOOM',
-			url: 'GOOGLE>COM',
-			date: 'TODAY'
+			url: 'GOOGLE.COM'
 		}
 	]);
 
@@ -16,16 +16,8 @@ function RSSFeed({ accountName }) {
 			.get('http://localhost:8080/rss/rssFeed')
 			.then((res) => {
 				console.log(res.data);
-				console.log('ac name', accountName);
 				const totalTweets = [ ...res.data[0], ...res.data[1] ];
-				const filteredTweets = totalTweets.filter((tweeterAccount) => {
-					return (
-						tweeterAccount.name === accountName ||
-						tweeterAccount.content.includes(accountName)
-					);
-				});
-				console.log('Filtered', filteredTweets);
-				setTweetData(filteredTweets);
+				setTweetData(totalTweets);
 			})
 			.catch((error) => {
 				console.log(error);
@@ -36,11 +28,8 @@ function RSSFeed({ accountName }) {
 		<div>
 			{tweetData.map((tweet) => {
 				return (
-					<div>
-						<p>{tweet.name}</p>
-						<p>{tweet.content}</p>
-						<p>{tweet.date}</p>
-						<a href={tweet.link} />
+					<div className="twitter-tweet">
+						<p className="Tweet-text">{tweet.content}</p>
 					</div>
 				);
 			})}

@@ -1,5 +1,6 @@
 const { app, BrowserWindow, Tray, nativeImage } = require('electron');
 const path = require('path');
+const shell = require('electron').shell;
 
 let tray, window;
 
@@ -24,6 +25,10 @@ function createWindow() {
 	window.loadURL('http://localhost:3000');
 
 	//window.webContents.openDevTools();
+	window.webContents.on('new-window', function(event, url) {
+		event.preventDefault();
+		shell.openExternal(url);
+	});
 }
 
 const createTray = () => {

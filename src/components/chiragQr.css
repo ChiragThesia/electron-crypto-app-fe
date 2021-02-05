@@ -1,0 +1,14 @@
+.Chirag-QR h2{
+        border-radius: 6px 6px 6px 6px;
+        box-shadow: 0 0 0 1px;
+        background-color:#4eb5f1;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 22px;
+        font-weight: bold;
+        height: 25px;
+        line-height: 25px;
+        margin: 18px !important;
+        padding: 8px 0 5px 5px;
+        text-shadow: 2px 2px 3px #222222;
+}
