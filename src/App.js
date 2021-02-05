@@ -6,7 +6,6 @@ import RSSFeed from './components/RSSFeedGenerator.jsx';
 function App() {
 	return (
 		<div className="App">
-			<button>Screen Shot</button>
 			<QRGenerator />
 			<div className="RSS-Feed">
 				<RSSFeed />

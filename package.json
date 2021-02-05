@@ -9,6 +9,7 @@
     "axios": "^0.21.1",
     "concurrently": "^5.3.0",
     "electron": "^11.2.2",
+    "electron-screencapture": "^1.1.0",
     "path": "^0.12.7",
     "qrcode.react": "^1.0.1",
     "react": "^17.0.1",
