@@ -9,7 +9,7 @@
 5. Open the Back end Directory: `cd electron-crypto-server`
 6. Install Server Dependencies: `npm install`
 7. Run Server: `npm run server`
-    - Check that you see a: "SErver is running at http://localhost:8080.
+    - Check that you see a: **Server is running at http://localhost:8080**
 8. Run App: `npm run crypto-app`
 
 ### This should allow you to run the app fully, the only disfunction aspect is the button for screenshotting which should be implmented with more time as more research is required. 
